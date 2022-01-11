@@ -50,8 +50,12 @@ data = [([0, 0], [0]), ([0, 1], [1]), ([1, 0], [1]), ([1, 1], [0])]
 
 for epoch in range(1000):
     for sample in data:
-        x = candl.tensor(sample[0])
-        y = candl.tensor(sample[1])
+        """ 
+        Note that we only allow batches of data, so the shape of the tensor must be n x m,
+        where m is the dimensionality of the input for each batch.
+        """
+        x = candl.tensor([sample[0]]) 
+        y = candl.tensor([sample[1]])
         loss = loss_fn(model.forward(x), y)
         loss.backward()
         # The `True` argument automatically zeroes the gradients after a step
