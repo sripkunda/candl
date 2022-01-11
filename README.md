@@ -31,7 +31,11 @@ To train a neural net (let's try to learn XOR), first we can create a model.
 ```python
 nn = candle.nn
 
-model = nn.Sequential(nn.Linear(2, 10), nn.ReLU(), nn.Linear(10, 10), nn.ReLU(), nn.Linear(10, 1))
+model = nn.Sequential(nn.Linear(2, 10), 
+                      nn.ReLU(), 
+                      nn.Linear(10, 10), 
+                      nn.ReLU(), 
+                      nn.Linear(10, 1))
 lr = 1e-3
 
 loss_fn = nn.MSE()
@@ -46,8 +50,8 @@ data = [([0, 0], [0]), ([0, 1], [1]), ([1, 0], [1]), ([1, 1], [0])]
 
 for epoch in range(1000):
     for sample in data:
-        x = Tensor(sample[0])
-        y = Tensor(sample[1])
+        x = candle.tensor(sample[0])
+        y = candle.tensor(sample[1])
         loss = loss_fn(model.forward(x), y)
         loss.backward()
         # The `True` argument automatically zeroes the gradients after a step
