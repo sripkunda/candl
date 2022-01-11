@@ -1,4 +1,4 @@
-# candle
+# candl
 
 <p align="center">
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Candle_flame_by_Shan_Sheehan.jpg" />
@@ -8,28 +8,28 @@ A tiny, pedagogical implementation of a neural network library with a pytorch-li
 
 ### Learning
 
-This little project is actually the result of [an article I wrote](https://hackmd.io/@sripkunda/understanding-neural-networks). Using it, you can learn more about how neural networks work and implement everything in candle yourself from scratch.
+This little project is actually the result of [an article I wrote](https://hackmd.io/@sripkunda/understanding-neural-networks). Using it, you can learn more about how neural networks work and implement everything in candl yourself from scratch.
 
 ### Installation 
 
 ```shell
-pip install candle
+pip install candl
 ```
 
 ### Usage
 
-First, import candle.
+First, import candl.
 
 ```python
-import candle
+import candl
 ```
 
-Candle comes with two modules: `nn` and `Tensor`. The `nn` module contains tools like modules, layers, SGD, MSE, etc. Candle tensors are extensions of numpy ndarrays that can be used to represent data and compute derivatives. 
+Candl comes with two modules: `nn` and `Tensor`. The `nn` module contains tools like modules, layers, SGD, MSE, etc. Candl tensors are extensions of numpy ndarrays that can be used to represent data and compute derivatives. 
 
 To train a neural net (let's try to learn XOR), first we can create a model. 
 
 ```python
-nn = candle.nn
+nn = candl.nn
 
 model = nn.Sequential(nn.Linear(2, 10), 
                       nn.ReLU(), 
@@ -50,8 +50,8 @@ data = [([0, 0], [0]), ([0, 1], [1]), ([1, 0], [1]), ([1, 1], [0])]
 
 for epoch in range(1000):
     for sample in data:
-        x = candle.tensor(sample[0])
-        y = candle.tensor(sample[1])
+        x = candl.tensor(sample[0])
+        y = candl.tensor(sample[1])
         loss = loss_fn(model.forward(x), y)
         loss.backward()
         # The `True` argument automatically zeroes the gradients after a step

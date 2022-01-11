@@ -1,5 +1,5 @@
 import numpy as np
-from candle.tensor import Tensor
+from candl.tensor import Tensor
 
 class Parameter: 
   def __init__(self, data, requires_grad=True):
