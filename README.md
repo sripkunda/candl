@@ -4,7 +4,7 @@ A tiny, pedagogical implementation of a neural network library with a pytorch-li
 
 ## learning
 
-This project is actually a result of [an article I wrote](https://hackmd.io/@sripkunda/understanding-neural-networks). Using it, you can learn more about how neural networks work and also implement everything in candle yourself from scratch.
+This little project is actually the result of [an article I wrote](https://hackmd.io/@sripkunda/understanding-neural-networks). Using it, you can learn more about how neural networks work and also implement everything in candle yourself from scratch.
 
 ## features
 
