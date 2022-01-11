@@ -1,3 +1,2 @@
-import candl
-tensor = candl.tensor.Tensor
-nn = candl.nn
+from candl.tensor import Tensor as tensor
+import candl.nn

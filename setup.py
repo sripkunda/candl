@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="candl",
-    version="0.0.3",
+    version="0.0.5",
     author="Sri Pranav Kunda",
     author_email="sripkunda@gmail.com",
     description="A tiny, pedagogical neural network library with a pytorch-like API.",
@@ -20,7 +20,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "candl"},
-    packages=setuptools.find_packages(where="candl"),
+    packages=setuptools.find_packages(),
     python_requires=">=3.6",
 )
