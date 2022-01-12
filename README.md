@@ -6,6 +6,8 @@
 
 A tiny, pedagogical implementation of a neural network library with a pytorch-like API. The primary use of this library is for education. Use the [actual pytorch](https://github.com/pytorch/pytorch) for more serious deep learning business. 
 
+The implementation is complete with tensor-valued autodiff (~100 lines) and a neural network API built off of it (~80 lines).
+
 ### Learning
 
 This little project is actually the result of [an article I wrote](https://hackmd.io/@sripkunda/understanding-neural-networks). Using it, you can learn more about how neural networks work and implement everything in candl yourself from scratch.
