@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="candl",
-    version="0.0.5",
+    version="0.0.6",
     author="Sri Pranav Kunda",
     author_email="sripkunda@gmail.com",
     description="A tiny, pedagogical neural network library with a pytorch-like API.",

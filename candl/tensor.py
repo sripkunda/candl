@@ -77,12 +77,12 @@ class Tensor:
     return self.__op(1, lambda a, b: a * (a > 0), lambda a, b, dc: (a > 0) * dc)
 
   def sigmoid(self): 
-    sigmoid = lambda a: 1 / (1 + np.exp(-a))
-    return self.__op(1, sigmoid, lambda a, b, dc: sigmoid(a) * (1 - sigmoid(a)) * dc)
+    sigmoid = lambda a, b: 1 / (1 + np.exp(-a))
+    return self.__op(1, sigmoid, lambda a, b, dc: sigmoid(a, b) * (1 - sigmoid(a, b)) * dc)
 
   def tanh(self): 
-    tanh = lambda a: np.tanh(a)
-    return self.__op(1, tanh, lambda a, b, dc: 1 - tanh(a) ** 2 * dc)
+    tanh = lambda a, b: np.tanh(a)
+    return self.__op(1, tanh, lambda a, b, dc: 1 - tanh(a, b) ** 2 * dc)
 
   def matmul(self, other):
     return self.__op(other, lambda a, b: np.dot(a, b), lambda a, b, dc: np.dot(dc, b.T), lambda a, b, dc: np.dot(a.T, dc)) 
