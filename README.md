@@ -33,11 +33,11 @@ To train a neural net (let's try to learn XOR), first we can create a model.
 ```python
 nn = candl.nn
 
-model = nn.Sequential(nn.Linear(2, 10), 
+model = nn.Sequential(nn.Linear(2, 64), 
                       nn.ReLU(), 
-                      nn.Linear(10, 10), 
+                      nn.Linear(64, 32), 
                       nn.ReLU(), 
-                      nn.Linear(10, 1))
+                      nn.Linear(32, 1))
 lr = 1e-3
 
 loss_fn = nn.MSE()
@@ -50,7 +50,7 @@ Then, we train:
 
 data = [([0, 0], [0]), ([0, 1], [1]), ([1, 0], [1]), ([1, 1], [0])]
 
-for epoch in range(1000):
+for epoch in range(100):
     for sample in data:
         """ 
         Note that we only allow batches of data, so the shape of the tensor must be n x m,
