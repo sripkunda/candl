@@ -31,10 +31,10 @@ def Sequential(*args):
 # Just a basic linear layer with an optional bias node
 class Linear(Module):
   def __init__(self, input_neurons, output_neurons, bias=True):
-    self.weights = Parameter(np.random.randn(input_neurons, output_neurons))
+    self.weights = Parameter(np.random.normal(0, (2 / input_neurons)**1/2, (input_neurons, output_neurons)))
     self.bias = bias
     if bias:
-      self.biases = Parameter(np.random.randn(output_neurons))
+      self.biases = Parameter(np.zeros(output_neurons))
 
   def forward(self, x):
     out = x.matmul(self.weights.data)
