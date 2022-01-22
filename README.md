@@ -38,7 +38,7 @@ model = nn.Sequential(nn.Linear(2, 64),
                       nn.Linear(64, 32), 
                       nn.ReLU(), 
                       nn.Linear(32, 1))
-lr = 1e-3
+lr = 1e-1
 
 loss_fn = nn.MSE()
 optimizer = nn.SGD(model.parameters(), lr)
