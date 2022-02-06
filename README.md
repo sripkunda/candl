@@ -10,7 +10,7 @@ The implementation is complete with tensor-valued autodiff (~100 lines) and a ne
 
 ### Learning
 
-This little project is actually the result of [an article I wrote](https://hackmd.io/@sripkunda/understanding-neural-networks). Using it, you can learn more about how neural networks work and implement everything in candl yourself from scratch.
+This little project is actually the result of [an article I wrote](https://sripkunda.github.io/blog/understanding-neural-networks.html). Using it, you can learn more about how neural networks work and implement everything in candl yourself from scratch.
 
 ### Installation 
 
